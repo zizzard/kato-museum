@@ -1,6 +1,5 @@
-// Downloads the Kato museum from the skinsales API into public/data/.
-// The API doesn't allow requests from museum.goodvibes.gg, so the site reads
-// this snapshot instead. Owner and sale/listing data are left out on purpose.
+// Refreshes public/data/ from the source API. Run manually and commit the result.
+// Owner and sale/listing data are left out on purpose.
 import { mkdir, writeFile } from "node:fs/promises";
 
 const API = "https://api.skinsales.gg";
@@ -26,7 +25,7 @@ const TEAMS = [
   ["vox", "Vox Eminor"],
 ];
 
-// Title colours by skin rarity, same as skinsales.gg.
+// Title colours by skin rarity.
 const RARITY_COLORS = {
   Classified: "#d32ce6",
   Covert: "#eb4b4b",

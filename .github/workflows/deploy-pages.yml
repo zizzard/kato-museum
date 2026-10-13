@@ -3,9 +3,6 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
-  schedule:
-    # Daily data refresh from skinsales.gg
-    - cron: "17 9 * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,9 +29,6 @@ jobs:
 
       - name: Install
         run: npm ci
-
-      - name: Snapshot museum data
-        run: npm run snapshot
 
       - name: Build
         run: npm run build
