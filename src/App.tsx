@@ -264,15 +264,6 @@ export default function App() {
           </nav>
         ) : null}
 
-        {dataset ? (
-          <footer className="footer">
-            Data from{" "}
-            <a href="https://skinsales.gg/museum" target="_blank" rel="noopener noreferrer">
-              skinsales.gg
-            </a>{" "}
-            · updated {new Date(dataset.generated_at).toLocaleDateString()}
-          </footer>
-        ) : null}
       </main>
     </div>
   );
